@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug App",
+            "program": "${workspaceFolder:youtube-channels}/.build/debug/App",
+            "args": [],
+            "cwd": "${workspaceFolder:youtube-channels}",
+            "preLaunchTask": "swift: Build Debug App"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release App",
+            "program": "${workspaceFolder:youtube-channels}/.build/release/App",
+            "args": [],
+            "cwd": "${workspaceFolder:youtube-channels}",
+            "preLaunchTask": "swift: Build Release App"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug YouTubeChannels",
+            "program": "${workspaceFolder:youtube-channels}/.build/debug/YouTubeChannels",
+            "args": [],
+            "cwd": "${workspaceFolder:youtube-channels}",
+            "preLaunchTask": "swift: Build Debug YouTubeChannels"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release YouTubeChannels",
+            "program": "${workspaceFolder:youtube-channels}/.build/release/YouTubeChannels",
+            "args": [],
+            "cwd": "${workspaceFolder:youtube-channels}",
+            "preLaunchTask": "swift: Build Release YouTubeChannels"
+        }
+    ]
+}
