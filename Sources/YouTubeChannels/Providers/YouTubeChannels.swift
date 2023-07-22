@@ -101,6 +101,7 @@ extension Application {
         func syncYouTubeChannels() async throws {
             let youTubeChannels = try await self.fetchYouTubeChannels() as [YouTubeChannel]
             try await youTubeChannels.store(on: self.application.db, logger: self.application.logger)
+            application.redis.publish("done", to: "youtube-channels-sync")
         }
 
     }
