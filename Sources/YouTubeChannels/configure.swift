@@ -39,6 +39,7 @@ public func configure(_ app: Application) async throws {
     )
 
     app.queues.use(.redis(redisConfiguration))
+    app.redis.configuration = redisConfiguration
 
     let scheduleEveryDayAtHour = Environment.get("SCHEDULE_EVERY_DAY_AT_HOUR").flatMap(Int.init(_:)) ?? 23
     let scheduleEveryDayAtMinute = Environment.get("SCHEDULE_EVERY_DAY_AT_MINUTE").flatMap(Int.init(_:)) ?? 0
